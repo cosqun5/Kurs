@@ -1,0 +1,58 @@
+﻿@using EntityLayer.Concrate
+@model List<Müəllimlər>
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_KursLyaout.cshtml";
+}
+
+<br />
+<br />
+<br />
+<section class="section new-course">
+    <div class="container">
+        <div class="section-header aos" data-aos="fade-up">
+            <div class="section-sub-head feature-head text-center">
+                <h2>Müəllimlər</h2>
+            </div>
+
+        </div>
+
+        <div class="course-feature">
+            <div class="row">
+                @foreach (var item in Model)
+                {
+                    <div class="col-lg-4 col-md-6 d-flex">
+                        <div class="course-box d-flex aos" data-aos="fade-up">
+                            <div class="product">
+                                <div class="product-img">
+                                    <a href="course-details.html">
+                                        <img class="img-fluid" alt="" src="@item.Şəkil">
+                                    </a>
+                                </div>
+                                <div class="product-content">
+                                    <div class="course-group d-flex">
+                                        <div class="course-group-img d-flex">
+                                            <div class="course-name">
+                                                <h4><a href="instructor-profile.html">@item.Ad @item.Soyad</a></h4>
+                                                <p>@item.İxtisas</p>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                    <h3 class="title instructor-text"><a href="course-details.html">@item.Məlumat</a></h3>
+
+
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                }
+
+
+
+            </div>
+        </div>
+    </div>
+</section>

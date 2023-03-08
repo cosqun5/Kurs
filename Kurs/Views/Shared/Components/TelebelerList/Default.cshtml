@@ -1,0 +1,26 @@
+﻿@using EntityLayer.Concrate
+@model List<Tələbələr>
+<div class="feature-instructors">
+    <div class="section-header aos" data-aos="fade-up">
+        <div class="section-sub-head feature-head text-center">
+            <h2>Fəxrlərimiz</h2>
+        </div>
+    </div>
+    <div class="owl-carousel instructors-course owl-theme aos" data-aos="fade-up">
+        @foreach (var item in Model)
+        {
+            <div class="instructors-widget">
+                <div class="instructors-img ">
+                    <a href="instructor-list.html">
+                        <img class="img-fluid" alt="" src="@item.Şəkil">
+                    </a>
+                </div>
+                <div class="instructors-content text-center">
+                    <h5><a href="instructor-profile.html">@item.Ad @item.Soyad </a></h5>
+                </div>
+            </div>
+        }
+
+
+    </div>
+</div>

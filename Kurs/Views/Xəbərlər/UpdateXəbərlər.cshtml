@@ -1,0 +1,32 @@
+﻿@model EntityLayer.Concrate.Xəbərlər
+@{
+    ViewData["Title"] = "UpdateXəbərlər";
+    Layout = "~/Views/Shared/_AdminLyaout.cshtml";
+}
+
+@using (Html.BeginForm("UpdateXəbərlər", "Xəbərlər", FormMethod.Post))
+{
+    <div class="col-12 grid-margin stretch-card">
+        <div class="card">
+            <div class="card-body">
+                <p class="card-description">  Deneyim Duzenleme Sehifesi </p>
+                <form class="forms-sample">
+                    <div class="form-group">
+                        @Html.HiddenFor(x => x.XəbərlərID, new { @class = "form-control" })
+                    </div>
+                    <div class="form-group">
+                        <label>Ad</label>
+                        @Html.TextBoxFor(x => x.Başlıq, new { @class = "form-control" })
+                    </div>
+                    <div class="form-group">
+                        <label>Məlumat</label>
+                        @Html.TextAreaFor(x => x.Məlumat, 3, 10, new { @class = "form-control" })
+                    </div>
+                    <button type="submit" class="btn btn-primary mr-2">Kaydet</button>
+                    <a href="/Xəbərlər/Index" class="btn btn-danger">Ləğv Et</a>
+                </form>
+            </div>
+        </div>
+    </div>
+}
+

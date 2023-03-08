@@ -1,0 +1,66 @@
+﻿@using EntityLayer.Concrate
+@model List<Xəbərlər>
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_KursLyaout.cshtml";
+}
+
+<div class="main-wrapper">
+
+    <br />
+    <br />
+    <br />
+    <br />
+
+
+
+    <div class="page-banner">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 col-12">
+                    <h1 class="mb-0">Xəbərlər</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br />
+    <br />
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 col-md-12">
+                <div class="row">
+                    @foreach (var item in Model)
+                    {
+                        <div class="col-md-4 col-sm-12">
+
+                            <div class="blog grid-blog">
+                                <div class="blog-image">
+                                    <a href="blog-details.html"><img class="img-fluid" src="/corona-free-dark-bootstrap-admin-template-1.0.0/blacktemplate/assets/images/faces/face12.jpg" alt="Post Image"></a>
+                                </div>
+                                <div class="blog-grid-box">
+                                    
+                                    <h3 class="blog-title"><a href="blog-details.html">@item.Başlıq</a></h3>
+                                    <div class="blog-content blog-read">
+                                        <p>@item.Məlumat</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    }
+
+
+
+
+                </div>
+
+
+
+            </div>
+
+
+
+        </div>
+    </div>
+
+</div>

@@ -1,0 +1,51 @@
+﻿@using EntityLayer.Concrate
+@model List<Haqqımızda>
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_AdminLyaout.cshtml";
+}
+
+<div class="col-lg-12 grid-margin stretch-card">
+    <div class="card">
+        <div class="card-body">
+            <h4 class="card-title">Haqqımızda</h4>
+
+            <div class="table-responsive">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>№</th>
+                            <th>Ad</th>
+                            <th>Soyad</th>
+                            <th>Şəkil</th>
+                            <th>Məlumat</th>
+                            <th>Sil</th>
+                            <th>Yenilə</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var item in Model)
+                        {
+                            <tr>
+                                <td>@item.HaqqımızdaID</td>
+                                <td>@item.Ad</td>
+                                <td>@item.Soyad</td>
+                                <td>@item.Şəkil</td>
+                                <td>@item.Məlumat</td>
+                                <td><a href="/Haqqımızda/DeleteHaqqımızda/@item.HaqqımızdaID" class="btn btn-danger">Sil</a></td>
+                                <td><a href="/Haqqımızda/UpdateHaqqımızda/@item.HaqqımızdaID" class="btn btn-success">Yenilə</a></td>
+                            </tr>
+                        }
+
+
+                    </tbody>
+                </table>
+
+            </div>
+            <br />
+            <br />
+            <a href="/Haqqımızda/AddHaqqımızda" class="btn btn-outline-info">Yeni Müəllim Yüklə</a>
+        </div>
+    </div>
+</div>
+

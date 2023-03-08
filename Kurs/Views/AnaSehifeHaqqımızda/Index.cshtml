@@ -1,0 +1,66 @@
+﻿@using EntityLayer.Concrate
+@model List<Haqqımızda>
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_KursLyaout.cshtml";
+}
+<br />
+<br />
+<br />
+<br />
+<br />
+@foreach (var item in Model)
+{
+    <div class="page-banner student-bg-blk">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 col-12">
+                    <div class="profile-info-blk">
+                        <a href="javascript:;" class="profile-info-img">
+                            <img src="@item.Şəkil" alt="Profile Avatar" class="img-fluid">
+                        </a>
+                        <h4><a href="javascript:;">@item.Ad @item.Soyad</h4>
+                        <p>Rəhbər</p>
+                        <ul class="list-unstyled inline-inline profile-info-social">
+                            <li class="list-inline-item">
+                                <a href="javascript:;">
+                                    <i class="fa-brands fa-facebook"></i>
+                                </a>
+                            </li>
+                            <li class="list-inline-item">
+                                <a href="javascript:;">
+                                    <i class="fa-brands fa-twitter"></i>
+                                </a>
+                            </li>
+                            <li class="list-inline-item">
+                                <a href="javascript:;">
+                                    <i class="fa-brands fa-instagram"></i>
+                                </a>
+                            </li>
+                            <li class="list-inline-item">
+                                <a href="javascript:;">
+                                    <i class="fa-brands fa-linkedin"></i>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row mt-4">
+            <div class="col-lg-12">
+
+                <div class="card overview-sec">
+                    <div class="card-body">
+                        <h5 class="subs-title">Haqqımızda</h5>
+                        <p>@item.Məlumat</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+}
+

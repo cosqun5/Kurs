@@ -1,0 +1,33 @@
+﻿@model EntityLayer.Concrate.Əlaqə
+@{
+    ViewData["Title"] = "AddƏlaqə";
+    Layout = "~/Views/Shared/_AdminLyaout.cshtml";
+}
+
+@using (Html.BeginForm("AddƏlaqə", "Əlaqə", FormMethod.Post))
+{
+    <div class="col-12 grid-margin stretch-card">
+        <div class="card">
+            <div class="card-body">
+                <p class="card-description"> Yeni Əlaqə Yüklə </p>
+                <form class="forms-sample">
+                    <div class="form-group">
+                        <label>Fecabook</label>
+                        <input type="text" class="form-control" name="Fecabook">
+                    </div>
+                    <div class="form-group">
+                        <label>Instagram</label>
+                        <input type="text" class="form-control" name="Instagram">
+                    </div>
+                    <div class="form-group">
+                        <label>Telefon</label>
+                        <input type="text" class="form-control" name="Telefon">
+                    </div>
+                    <button type="submit" class="btn btn-primary mr-2">Yüklə</button>
+                    <a href="/Əlaqə/Index" class="btn btn-danger">Ləğv Et</a>
+                </form>
+            </div>
+        </div>
+    </div>
+}
+

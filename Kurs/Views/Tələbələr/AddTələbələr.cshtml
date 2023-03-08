@@ -1,0 +1,42 @@
+﻿@model EntityLayer.Concrate.Tələbələr
+@{
+    ViewData["Title"] = "AddTələbələr";
+    Layout = "~/Views/Shared/_AdminLyaout.cshtml";
+}
+
+@using (Html.BeginForm("AddTələbələr", "Tələbələr", FormMethod.Post))
+{
+    <div class="col-12 grid-margin stretch-card">
+        <div class="card">
+            <div class="card-body">
+                <p class="card-description"> Yeni Tələbələr Yüklə </p>
+                <form class="forms-sample">
+                    <div class="form-group">
+                        <label>Ad</label>
+                        <input type="text" class="form-control" name="Ad">
+                    </div>
+                    <div class="form-group">
+                        <label>Soyad</label>
+                        <input type="text" class="form-control" name="Soyad">
+                    </div>
+                    <div class="form-group">
+                        <label>Şəkil</label>
+                        <input type="text" class="form-control" name="Şəkil">
+                    </div>
+                    <div class="form-group">
+                        <label>Nəticəsi</label>
+                        <input type="text" class="form-control" name="Nəticəsi">
+                    </div>
+                    <div class="form-group">
+                        <label>Məlumat</label>
+                        @Html.TextAreaFor(x => x.Məlumat, 3, 10, new { @class = "form-control" })
+                    </div>
+                    <br />
+                    <br />
+                    <button type="submit" class="btn btn-primary mr-2">Yüklə</button>
+                    <a href="/Tələbələr/Index" class="btn btn-danger">Ləğv Et</a>
+                </form>
+            </div>
+        </div>
+    </div>
+}
